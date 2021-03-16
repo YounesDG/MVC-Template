@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "files": ["src/helpers.php", "src/query.php"],
+        "psr-4": {
+            "DGRSDT_CANDIDAT\\": "src/"
+        }
+    },
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "symfony/var-dumper": "^5.2",
+        "filp/whoops": "^2.10"
+    }
+}
