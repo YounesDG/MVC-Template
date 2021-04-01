@@ -1,7 +1,14 @@
+#Options -Indexes
 RewriteEngine On
 RewriteBase /MVC
 
 RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
-RewriteRule ^(.*)$ public/index.php?$1 [L,QSA]
+
+#RewriteRule ^$/(.*)$ public/$1/$1 [L,NC] # permet de charger les fichier qui se trouve dans le dossier public
+RewriteRule ^css/(.*)$ public/css/$1 [L,NC] # permet de charger le css
+
+
+RewriteRule ^(.*)$ public/index.php?$1 [L,QSA] # naviguer entre l'URL
+
 
